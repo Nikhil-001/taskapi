@@ -1,6 +1,6 @@
 # Task API
 
-A production-ready REST API for task management built with Spring Boot 3, JWT authentication, and Redis.
+A production-ready REST API for task management built with Spring Boot, JWT authentication, and Redis.
 
 **Live URL:** https://taskapi-production-3f0b.up.railway.app
 
