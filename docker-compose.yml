@@ -1,0 +1,17 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      - JWT_SECRET=3f8a2b1c9d4e7f0a5b8c2d1e6f3a9b4c7d0e5f2a8b1c4d7e0f3a6b9c2d5e8f
+      - JWT_EXPIRATION=86400000
+    depends_on:
+      - redis
